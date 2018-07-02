@@ -1,4 +1,4 @@
-apt-get install perl build-essential git --assume-yes
+apt-get install perl build-essential git tcpdump tshark --assume-yes
 
 cpan -f install Tree::DAG_Node Test::Warn WWW::RobotRules HTTP::Cookies Net::FTP Net::HTTP Digest::base Digest::MD5 HTTP::Negotiate File::Listing LWP::UserAgent HTML::Form HTTP::Daemon Test \
 Text::Wrap Pod::Escapes Pod::Simple Pod::Man ExtUtils::MakeMaker HTTP::Server::Simple Time::Local HTTP::Date MIME::Base64 URI Encode Encode::Locale LWP::MediaTypes Compress::Raw::Bzip2 \
