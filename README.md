@@ -1,6 +1,3 @@
-# speedtest
-
-
 # Installation
 run ./install
 
