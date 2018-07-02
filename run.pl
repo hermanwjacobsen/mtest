@@ -23,6 +23,7 @@ print "$dir\n";
 $log_dir = "$dir/logs";
 $scripts_dir = 'scripts';
 $pcap_dir = 'pcap';
+$interface = 'ens160';
 
 @server_list = (
 	#id,name,location,url
@@ -72,7 +73,7 @@ print $fh "$task_timestamp\, $task_id\n";
 close $fh;
 
 sub tcpdump {
-system("tcpdump -U -i ens192 -w $pcap_dir/$task_id.pcap");
+system("tcpdump -U -i $interface -w $pcap_dir/$task_id.pcap");
     return;
 }
 
