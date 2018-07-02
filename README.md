@@ -2,7 +2,7 @@
 
 git clone https://github.com/hermanwjacobsen/mtest.git  
 cd mtest  
-run ./install
+./install
 
 # Run Program
 
