@@ -29,8 +29,7 @@ $pcap_dir = 'pcap';
 	'1,Vodafone,Iceland,http://speedtest.c.is/speedtest/',
 	'2,Vodafone,United Kingdom,http://speedtest.vodafone.co.uk/speedtest/',
 	'3,hey,Faroe Islands,http://ferd.vodafone.fo/speedtest/',
-#	'4,Faroese Telecom, Faroe Islands,http://ferd.vodafone.fo/speedtest/',
-#	'5,Ragnar,http://89.238.176.12/speedtest/'
+	'4,Faroese Telecom, Faroe Islands,http://ferd.vodafone.fo/speedtest/',
 	);
 
 @test_list = (
@@ -50,21 +49,21 @@ $pcap_dir = 'pcap';
 
 chdir("$dir") or die "cannot change: $!\n";
 
-#if (! -e "$log_dir/tests.log") {
-#open(FH, '>', "$log_dir/tests.log") or die $!;
-#print FH "task_timestamp,task_id";
-#close (FH);
-#};
+if (! -e "$log_dir/tests.log") {
+open(FH, '>', "$log_dir/tests.log") or die $!;
+print FH "task_timestamp,$task_id\n";
+close (FH);
+};
 
 if (! -e "$log_dir/webtest.log") {
 open(FH, '>', "$log_dir/tests.log") or die $!;
-print FH "task_id,task_timestamp,start_time,end_time,server_id,server_name,server_location,test_name,test_filename,bytes,loadtime,status";
+print FH "task_id,task_timestamp,start_time,end_time,server_id,server_name,server_location,test_name,test_filename,bytes,loadtime,status\n";
 close (FH);
 };
 
 
 $lines = count_lines("$log_dir/tests.log");
-$task_id = $lines + 1;
+$task_id = $lines;
 $task_timestamp = strftime "%Y-%m-%d %H:%M:00", localtime;
 
 $filename = 'tests.log';
@@ -102,7 +101,3 @@ $firstThread = threads->create(\&tcpdump,1);
 $secondThread = threads->create(\&tests,1);
 
 $_->join() foreach ( $firstThread, $secondThread );
-
-
-
-
