@@ -1,3 +1,5 @@
+mkdir logs pcap
+
 apt-get install perl build-essential git tcpdump tshark --assume-yes
 
 cpan -f install Tree::DAG_Node Test::Warn WWW::RobotRules HTTP::Cookies Net::FTP Net::HTTP Digest::base Digest::MD5 HTTP::Negotiate File::Listing LWP::UserAgent HTML::Form HTTP::Daemon Test \
