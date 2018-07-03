@@ -7,3 +7,7 @@ cd mtest
 # Run Program
 
 perl run.pl
+
+# Crontab
+
+Crontab -e , add */10 * * * * perl /path/script.pl
