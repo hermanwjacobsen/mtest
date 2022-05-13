@@ -35,7 +35,7 @@ $interface = 'ens160';
 	'5,Portal.fo,Unknown,http://www.portal.fo,2',
 	'6,in.fo,Unknown,http://www.in.fo,2',
 	'7,vodafone.is,Unknown,http://www.vodafone.is,2',
-	'8,vp.fo,Unknown,http://www.vodafone.is,2'
+	'8,vp.fo,Unknown,http://www.vp.fo,2'
 	);
 
 
